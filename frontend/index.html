@@ -1,13 +1,26 @@
 <!DOCTYPE html>
-<html lang='en'>
+<html lang="en">
 <head>
-    <meta charset='UTF-8'>
-    <meta name='viewport' content='width=device-width, initial-scale=1.0'>
-    <link rel='stylesheet' href='style.css'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>AI Writing Assistant</title>
 </head>
 <body>
-    <h1>Welcome to the AI Writing Assistant</h1>
-    <script src='script.js'></script>
+    <header>
+        <h1>Welcome to the AI Writing Assistant</h1>
+    </header>
+    <main>
+        <textarea id="userInput" placeholder="Type or paste your text here..."></textarea>
+        <button id="submitBtn">Get Suggestions</button>
+        <section id="aiResponse">
+            <h2>AI Suggestions:</h2>
+            <p id="suggestions"></p>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 AI Writing Assistant. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
 </body>
 </html>

@@ -1,10 +1,36 @@
-/* Add your CSS styles here */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f8f8f8;
     margin: 0;
     padding: 0;
+    background-color: #f8f8f8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
-h1 {
-    color: #333;
+header, footer {
+    background-color: #4CAF50;
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
+main {
+    margin: 2em;
+}
+textarea {
+    width: 100%;
+    min-height: 100px;
+}
+button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+}
+button:hover {
+    background-color: #45a049;
+}
+#aiResponse {
+    margin-top: 20px;
 }
