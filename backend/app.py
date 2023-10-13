@@ -6,6 +6,7 @@ app = Flask(__name__)
 API_URL = "https://api.openai.com/v1"  # Replace with your actual API endpoint
 API_KEY = "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"  # Replace with your actual API key
 
+
 @app.route('/')
 def home():
     return 'AI Writing Assistant Backend'

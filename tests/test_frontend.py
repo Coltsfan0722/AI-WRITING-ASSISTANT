@@ -13,24 +13,32 @@ class FrontEndTests(unittest.TestCase):
         driver.get(self.base_url)
         self.assertIn("AI Writing Assistant", driver.title)
 
-    def test_user_interaction(self):
-        driver = self.driver
-        driver.get(self.base_url)
-        
-        # Find input and button elements
-        input_element = driver.find_element_by_id("userInput")
-        button_element = driver.find_element_by_id("submitBtn")
-        
-        # Simulate user typing and button click
-        input_element.send_keys("This is a test input")
-        button_element.click()
-        
-        # Validate AI response - this will depend on your actual implementation
-        # For example, you might check if a new element with the AI's response is displayed
-        ai_response = driver.find_element_by_id("suggestions")
-        self.assertNotEqual(ai_response.text, "")
+def test_user_interaction(self):
+    driver = self.driver
+    driver.get(self.base_url)
+
+    # Find input and button elements
+    input_element = driver.find_element_by_id("userInput")
+    button_element = driver.find_element_by_id("submitBtn")
+
+    # Simulate user typing and button click
+    input_element.send_keys("This is a test input")
+    button_element.click()
+
+    # Validate AI response
+    ai_response = driver.find_element_by_id("suggestions")
+    self.assertNotEqual(ai_response.text, "")
 
     def tearDown(self):
+        """
+        Closes the driver instance in a test case.
+
+        Inputs:
+        - self: The instance of the test case class.
+
+        Outputs:
+        - None
+        """
         self.driver.close()
 
 if __name__ == "__main__":
